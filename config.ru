@@ -1,2 +1,3 @@
-require "app.rb"
-require "bundler"
+require_relative "./app"
+
+run Battle
