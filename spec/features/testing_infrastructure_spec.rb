@@ -6,10 +6,11 @@ feature 'Testing infrastructure' do
 end
 
 feature "Entering names" do
-  scenario "Player 1 enters their name" do
+  scenario "Submitting names" do
     visit "/"
-    fill_in "player_1", :with => "Ben"
-    expect(page).to have_field("player_1", with: "Ben")
-
+    fill_in "player_1", with: "Ben"
+    fill_in "player_2", with: "Terry"
+    click_button 'Submit'
+    expect(page).to have_content("Ben versus Terry")
   end
 end
