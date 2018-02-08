@@ -16,11 +16,5 @@ subject(:player_2) {described_class.new("Hannah")}
     end
   end
 
-  describe "#Attack" do
-    it "returns a players hit points minus 10" do
-      expect {player_1.attack(player_2) }.to change {player_2.hit_points}.by(-10)
-    end
-  end
-
 
 end
