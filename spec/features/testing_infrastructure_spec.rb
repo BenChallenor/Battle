@@ -24,4 +24,10 @@ feature "Hit points" do
       sign_in_and_play
       expect(page).to have_selector(:link_or_button, "Attack!")
     end
+
+    scenario 'Get confirmation of attack' do
+      sign_in_and_play
+      click_button('Attack!')
+      expect(page).to have_content("You have attacked Hannah")
+    end
 end
