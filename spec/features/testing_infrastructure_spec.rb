@@ -18,3 +18,10 @@ feature "Hit points" do
     expect(page).to have_content("Ben versus Hannah: 50 HP")
   end
   end
+
+  feature "Attacking player 2" do
+    scenario "Attack button exists" do
+      sign_in_and_play
+      expect(page).to have_selector(:link_or_button, "Attack!")
+    end
+end
