@@ -11,7 +11,7 @@ subject(:player_1) {described_class.new("Ben")}
 
   describe '#hit_points' do
     it "returns player's hit points" do
-      expect(subject.hit_points).to eq 50
+      expect(subject.hit_points).to eq Player::DEFAULT_QUANTITY
     end
   end
 
