@@ -31,3 +31,19 @@ feature "Hit points" do
       expect(page).to have_content("You have attacked Hannah")
     end
 end
+
+feature "Implementing hit points" do
+  scenario "Attacking once reduces hit points to 40" do
+    sign_in_and_play
+    click_button('Attack!')
+    expect(page).to have_content("Hannah's HP is now 40")
+  end
+
+  # scenario "Attack reduces hit points by 10" do
+  #   sign_in_and_play
+  #   click_button('Attack!')
+  #   visit('/play')
+  #   click_button('Attack!')
+  #   expect(page).to have_content("Hannah's HP is now 30")
+  # end
+end
