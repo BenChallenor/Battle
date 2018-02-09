@@ -2,3 +2,16 @@
 <form action="/attack">
   <input type="submit" value="Attack!">
 </form>
+
+<table style="border: 1px solid black">
+  <tbody>
+    <tr>
+      <td><%= @attacker.name %> HP</td>
+      <td><%= @victim.name %> HP </td>
+    </tr>
+    <tr>
+      <td><%= @attacker.hit_points %></td>
+      <td><%= @victim.hit_points %></td>
+    </tr>
+  </tbody>
+</table>
