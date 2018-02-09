@@ -1,4 +1,12 @@
-<h1><%= @player_1 %> versus <%= @player_2 %>: 50 HP</h1>
+<h1><%= @player_1.name %> versus <%= @player_2.name %>: <%= @player_2.hit_points %> HP</h1>
 <form action="/attack">
   <input type="submit" value="Attack!">
 </form>
+
+
+<!-- We need to change something here so that players can swap turns -->
+<!-- This page shows player_1's turn - i.e. @p1_turn = true  -->
+<!-- what will it look like when @p1_turn = false? i.e. player_2's turn -->
+
+
+<h1>
