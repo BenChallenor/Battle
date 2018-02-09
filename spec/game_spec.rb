@@ -10,7 +10,7 @@ describe Game do
   describe "#Attack" do
     it "returns a players hit points minus 10" do
       expect(player_2).to receive(:receive_damage)
-      subject.attack(player_2)
+      subject.attack
     end
   end
 

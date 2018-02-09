@@ -52,6 +52,14 @@ feature "Implementing hit points" do
       click_button('Proceed to next turn')
       expect(page).to have_content("Player 2 versus Player 1: 50 HP")
     end
+
+    scenario "Attacking player 1 once reduces hit points to 40" do
+      sign_in_and_play
+      click_button('Attack!')
+      click_button('Proceed to next turn')
+      click_button('Attack!')
+      expect(page).to have_content("Player 1's HP is now 40")
+    end
   end
 
 

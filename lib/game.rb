@@ -9,8 +9,8 @@ attr_reader :player_1, :player_2, :attacker, :victim
     @victim = @player_2
   end
 
-  def attack(player)
-    player.receive_damage
+  def attack
+    @victim.receive_damage
     turn_switcher
   end
 
