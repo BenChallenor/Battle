@@ -1,11 +1,4 @@
-<% if @attacker == @player_1 %>
-<h1><%= @player_1.name %> versus <%= @player_2.name %>: <%= @player_2.hit_points %> HP</h1>
+<h1><%= @attacker.name %> versus <%= @victim.name %>: <%= @victim.hit_points %> HP</h1>
 <form action="/attack">
   <input type="submit" value="Attack!">
 </form>
-<% else %>
-<h1><%= @player_2.name %> versus <%= @player_1.name %>: <%= @player_1.hit_points %> HP</h1>
-<form action="/attack">
-  <input type="submit" value="Attack!">
-</form>
-<% end %>

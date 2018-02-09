@@ -23,17 +23,12 @@ class Battle < Sinatra::Base
   end
 
   get "/play" do
-    # $game = Game.new()
-    @player_1 = $game.player_1
-    @player_2 = $game.player_2
     @attacker = $game.attacker
     @victim = $game.victim
     erb(:play)
   end
 
   get "/attack" do
-    @player_1 = $game.player_1
-    @player_2 = $game.player_2
     @attacker = $game.attacker
     @victim = $game.victim
     $game.attack
