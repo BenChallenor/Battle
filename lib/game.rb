@@ -1,19 +1,24 @@
 class Game
 
-attr_reader :player_1, :player_2
-
-  # def initialize
-  #   @player_1 = Player.new("name")
-  #   @player_2 = Player.new("name")
-  # end
+attr_reader :player_1, :player_2, :attacker, :victim
 
   def initialize(player_1, player_2)
     @player_1 = player_1
     @player_2 = player_2
+    @attacker = @player_1
+    @victim = @player_2
   end
 
   def attack(player)
     player.receive_damage
+    turn_switcher
   end
+
+  private
+
+  def turn_switcher
+    @attacker, @victim = @victim, @attacker
+  end
+
 
 end
